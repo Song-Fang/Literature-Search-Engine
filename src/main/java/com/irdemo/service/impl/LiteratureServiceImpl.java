@@ -1,7 +1,7 @@
 package com.irdemo.service.impl;
 
-import com.irdemo.bean.Products;
-import com.irdemo.service.ProductsService;
+import com.irdemo.bean.Literature;
+import com.irdemo.service.LiteratureService;
 import com.irdemo.utils.PageUtils;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Service
-public class ProductsServiceImpl implements ProductsService {
+public class LiteratureServiceImpl implements LiteratureService {
 
     @Autowired
     private HttpSolrClient httpSolrClient;
@@ -78,9 +78,9 @@ public class ProductsServiceImpl implements ProductsService {
 
 
 
-        List<Products> list=queryResponse.getBeans(Products.class);
+        List<Literature> list=queryResponse.getBeans(Literature.class);
 
-        /*for (Products p : list) {
+        /*for (Literature p : list) {
 
             Map<String,List<String>> map1=map.get(p.getPid());
             List<String> list1=map1.get("prod_pname");

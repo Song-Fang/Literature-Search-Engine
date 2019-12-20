@@ -1,6 +1,6 @@
 package com.irdemo;
 
-import com.irdemo.bean.Products;
+import com.irdemo.bean.Literature;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
@@ -23,7 +23,7 @@ public class ProductsTest {
         HttpSolrClient solrClient = new HttpSolrClient.Builder(solrUrl).build();
 
 
-        Products p = new Products();
+        Literature p = new Literature();
 
         p.setPid("64");
         p.setCatalogName("Food");
@@ -55,9 +55,9 @@ public class ProductsTest {
         //3 Execute query
         SolrQuery solrQuery = new SolrQuery("*:*");
         QueryResponse query = solrClient.query(solrQuery);
-        List<Products> list = query.getBeans(Products.class);
-        for (Products products : list) {
-            System.out.println(products.getPid()+":"+products.getPname());
+        List<Literature> list = query.getBeans(Literature.class);
+        for (Literature literature : list) {
+            System.out.println(literature.getPid()+":"+ literature.getPname());
         }
 
     }
@@ -104,13 +104,13 @@ public class ProductsTest {
 
         long numFound = query.getResults().getNumFound();
         System.out.println(numFound);
-        List<Products> list = query.getBeans(Products.class);
-        for (Products products : list) {
-            Map<String, List<String>> stringListMap = highlighting.get(products.getPid());
+        List<Literature> list = query.getBeans(Literature.class);
+        for (Literature literature : list) {
+            Map<String, List<String>> stringListMap = highlighting.get(literature.getPid());
             List<String> strings = stringListMap.get("prod_pname");
             String result = strings.get(0);
-            products.setPname(result);
-            System.out.println(products.getPid()+":"+products.getPname()+"\t"+products.getPrice());
+            literature.setPname(result);
+            System.out.println(literature.getPid()+":"+ literature.getPname()+"\t"+ literature.getPrice());
         }
 
     }

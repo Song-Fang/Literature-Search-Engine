@@ -7,7 +7,7 @@ import org.apache.solr.client.solrj.beans.Field;
 import java.util.Date;
 
 @Data
-public class Products {
+public class Literature {
 
     @Field("id")
     private String pid;

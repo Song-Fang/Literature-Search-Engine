@@ -1,6 +1,6 @@
 package com.irdemo.controller;
 
-import com.irdemo.service.ProductsService;
+import com.irdemo.service.LiteratureService;
 import com.irdemo.utils.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,10 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("product")
-public class ProductsController {
+public class LiteratureController {
 
     @Autowired
-    private ProductsService productsService;
+    private LiteratureService literatureService;
 
 
     @RequestMapping("search")
@@ -38,7 +38,7 @@ public class ProductsController {
         ModelAndView model = new ModelAndView();
         model.setViewName(url);
         try {
-            PageUtils pageUtils = productsService.search(keyword, catalogName, priceStr, psort, currtPage, 6);
+            PageUtils pageUtils = literatureService.search(keyword, catalogName, priceStr, psort, currtPage, 6);
             model.addObject("pageList",pageUtils);
             model.addObject("keyword",keyword);
             model.addObject("catalogName",catalogName);
