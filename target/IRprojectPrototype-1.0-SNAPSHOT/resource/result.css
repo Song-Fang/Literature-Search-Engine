@@ -1,0 +1,126 @@
+#resultImage{
+	margin-left: 15px;
+	margin-top: 10px;
+	height: 36px;
+	width: 81px;
+}
+
+
+#key{
+
+	width: 539px;
+	height: 36px;
+	border: solid 1px #4791ff;
+	background-image: url(../images/camera.png);
+	background-repeat: no-repeat;
+	background-position: 510px;
+	background-size: 18px;
+	margin-top: 10px;
+	margin-left: 1px;
+
+}
+
+input[type=button]{
+	width: 100px;
+	height: 36.5px;
+	color: #fff;
+	background-color: #3385ff;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: "times new roman";
+	letter-spacing: 1px;
+	border:solid 1px #3385ff;
+	border-bottom: solid 1px #2d78f4;
+	position: relative;
+	right: 5px;
+	top: -2px;
+}
+
+#transition{
+	height: 36px;
+	background-color: #f8f8f8;
+}
+
+#transitionFont{
+	font-family: "times new roman";
+	font-weight: bold;
+	position: relative;
+	top: 6px;
+	left: 95px;
+	
+}
+
+#underline{
+	border-bottom: 5px solid #0081EF;
+}
+
+#DocumentsList{
+	position: relative;
+	left: 95px;
+}
+
+#documentListImage{
+	height:180px;
+	width:140px;
+}
+
+
+
+#title{
+	margin-bottom: 5px;
+	font-family: "times new roman";
+	font-weight: bold;
+}
+
+#description{
+	margin-left: 1.5px;
+}
+
+#titleStress{
+	border-bottom: 2px solid blue;
+}
+
+.des{
+	font-family: "times new roman";
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.contentDes{
+	font-family: "times new roman";
+	font-weight: normal;
+	font-size: 16px;
+}
+
+.prev{
+	font-size: 25px;
+	color: white;
+	background-color: #007BFF;
+	text-decoration: none;
+}
+
+.prev:hover{
+	text-decoration: none;
+}
+
+.next{
+	font-size: 25px;
+	color: white;
+	background-color: #007BFF;
+	text-decoration: none;
+}
+
+.next:hover{
+	text-decoration: none;
+}
+
+
+#pageSwitch{
+	text-align: center;
+}
+
+#pageText{
+	font-size: 25px;
+	color: white;
+	background-color: #007BFF;
+}
